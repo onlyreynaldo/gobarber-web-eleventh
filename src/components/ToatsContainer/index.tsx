@@ -20,10 +20,11 @@ const ToatsContainer: React.FC<ToastContainerProps> = ({ messages }) => {
       leave: { right: '-120%', opacity: 0 },
     },
   );
+
   return (
     <Container>
       {messageWithTransitions.map(({ item, key, props }) => (
-        <Toast key={key} message={item} style={props} />
+        <Toast key={key} style={props} message={item} />
       ))}
     </Container>
   );
