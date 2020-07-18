@@ -34,6 +34,7 @@
     "react/jsx-props-no-spreading": "off",
     "react/prop-types":"off",
     "@typescript-eslint/ban-types": "off",
+    "camelcase": "off",
     "no-unused-expressions": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
