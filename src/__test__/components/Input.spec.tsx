@@ -40,4 +40,20 @@ describe('Input component', () => {
       expect(containerElement).toHaveStyle('color: #ff9000;');
     });
   });
+
+  it('should render heighlight on input blur', async () => {
+    const { getByPlaceholderText, getByTestId } = render(
+      <Input name="email" placeholder="E-mail" />,
+    );
+
+    const inputElement = getByPlaceholderText('E-mail');
+    const containerElement = getByTestId('input-container');
+
+    fireEvent.blur(inputElement);
+
+    await wait(() => {
+      expect(containerElement).not.toHaveStyle('border-color: #ff9000;');
+      expect(containerElement).not.toHaveStyle('color: #ff9000;');
+    });
+  });
 });
